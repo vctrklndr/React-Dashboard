@@ -1,0 +1,14 @@
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
+
+body {
+  margin: 20px;
+  font-family: 'Fira Code', monospace;
+  text-align: center;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+}
