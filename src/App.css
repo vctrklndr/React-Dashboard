@@ -3,12 +3,39 @@
 body {
   margin: 20px;
   font-family: 'Fira Code', monospace;
+  font-size: .8rem;
+  letter-spacing: .05rem;
   text-align: center;
-  background-color: #fff;
+  background-color: #26deff;
 }
 
-h1 {
-  font-size: .8rem;
-  font-weight: 300;
-  line-height: 1.2rem;
+p {
+  margin: 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: .75rem;
+  letter-spacing: .05rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 400ms;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.cardContainer {
+  margin: 20px;
+  padding: 10px;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 }
