@@ -31,6 +31,7 @@ class CurrencyView extends React.Component {
         <p>
           Last update: {this.state.latestUpdate}
         </p>
+        <button>Update</button>
       </div>
     )
   }

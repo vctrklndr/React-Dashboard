@@ -5,27 +5,21 @@ class PostIt2 extends React.Component {
     works: JSON.parse(localStorage.getItem('works'))
   }
 
-  add() {
+  addNewPostIt() {
     let title = this.refs.title.value;
-    if(this.refs.title.value === '') {
+    if(title === '') {
       return null;
     }
-    if(localStorage.getItem('works') === null) {
-      let works = [];
-      works.push(title);
-      localStorage.setItem('works', JSON.stringify(works));
-    } else {
-      let works = JSON.parse(localStorage.getItem('works'));
-      works.push(title);
-      localStorage.setItem('works', JSON.stringify(works));
-    }
+    let works = JSON.parse(localStorage.getItem('works'));
+    works.push(title);
+    localStorage.setItem('works', JSON.stringify(works));
     this.setState({
       works: JSON.parse(localStorage.getItem('works'))
     });
     this.refs.title.value = '';
   }
   
-  delete(e) {
+  deletePost(e) {
     let index = e.target.getAttribute('data-key');
     let list = JSON.parse(localStorage.getItem('works'));
     list.splice(index, 1);
@@ -38,18 +32,23 @@ class PostIt2 extends React.Component {
   render() {
     return (
       <div className="cardContainer">
-        <h5>Post It</h5>
+        <h5>Post-it</h5>
         <input type="text"
                placeholder="What to remember?" 
                ref="title" 
         />
-        <button onClick={this.add.bind(this)}>Add</button>
+        <button onClick={this.addNewPostIt.bind(this)}>Add</button>
         <ul>
           {this.state.works.map(function(work, index){
             return (
-              <li key={index}>{work} <button onClick={this.delete.bind(this)} data-key={index}>Delete</button></li>
-            )
-          }, this)}
+              <li key={index}>
+                {work}
+                <button onClick={this.deletePost.bind(this)} data-key={index}>
+                  Delete
+                </button>
+              </li>
+            )}, this)
+          }
         </ul>
       </div>
     )

@@ -4,15 +4,11 @@ import '../App.css';
 class Timer extends React.Component {
 
   state = {
-    timeLeft: 60,
-    isRunning: false
+    time: 60,
   }
 
   startTimer() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-    this.setState({
-      isRunning: false
-    });
+    this.time = setInterval(() => this.tick(), 1000);
   }
 
 render() {
