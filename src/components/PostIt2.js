@@ -32,7 +32,7 @@ class PostIt2 extends React.Component {
   render() {
     return (
       <div className="cardContainer">
-        <h5>Post-it</h5>
+        <h3>Post-it</h3>
         <input type="text"
                placeholder="What to remember?" 
                ref="title" 

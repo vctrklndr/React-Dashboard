@@ -25,7 +25,7 @@ class PostIt extends React.Component {
   render(){ 
     return(
       <div className="cardContainer">
-        <h5>Post-it</h5>
+        <h3>Post-it</h3>
         <InputField handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     value={this.state.name }

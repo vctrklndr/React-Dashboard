@@ -4,7 +4,6 @@
 body {
   margin: 20px;
   font-family: 'Fira Code', monospace;
-  font-size: .8rem;
   font-weight: 300;
   letter-spacing: .05rem;
   text-align: center;
@@ -16,8 +15,13 @@ h1 {
   color: #fc6be4;
 }
 
+h3 {
+  margin-top: 0;
+}
+
 p {
   margin: 0;
+  font-size: .8rem;
 }
 
 input {
@@ -43,7 +47,7 @@ ul {
 
 .cardContainer {
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
   width: 300px;
   background-color: #fff;
   border: 1px solid #000;

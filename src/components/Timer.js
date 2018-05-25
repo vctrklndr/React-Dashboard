@@ -14,7 +14,7 @@ class Timer extends React.Component {
 render() {
     return (
         <div className="cardContainer">
-          <h5>Timer</h5>
+          <h3>Timer</h3>
           <p> {this.state.time} </p>
           <button>Start timer!</button>
         </div >

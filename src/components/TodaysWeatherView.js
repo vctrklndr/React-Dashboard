@@ -23,7 +23,7 @@ class TodaysWeatherView extends React.Component {
   render(){ 
     return(
       <div className="cardContainer">
-        <h5>Weather</h5>
+        <h3>Weather</h3>
         <p><b>Stockholm</b></p>
         <p>Temperature: {Math.round(this.state.weather.temp)}°C</p>
       </div>

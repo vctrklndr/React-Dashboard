@@ -24,7 +24,7 @@ class CurrencyView extends React.Component {
   render(){ 
     return(
       <div className="cardContainer">
-        <h5>Currency</h5>
+        <h3>Currency</h3>
         <p>
           {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
         </p>
