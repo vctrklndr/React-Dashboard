@@ -19,6 +19,11 @@ h3 {
   margin-top: 0;
 }
 
+h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 p {
   margin: 0;
   font-size: .8rem;
@@ -28,6 +33,7 @@ input {
   padding: 5px 0 5px 10px;
   width: 200px;
   font-family: 'Fira Code', monospace;
+  font-size: .8rem;
   font-weight: 300;
   border: 1px solid #000;
 }
@@ -36,6 +42,7 @@ ul {
   margin: 10px 0 0 0;
   padding: 0;
   list-style: none;
+  font-size: .8rem;
 }
 
 .app {

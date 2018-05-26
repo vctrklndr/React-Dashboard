@@ -8,8 +8,8 @@ class App extends React.Component {
   render(){ 
     
     return(
-      <Container>
-        <Header />
+      <Container className="app">
+        <Header heading="Dashboard UI" />
         <Main />
       </Container>
     )

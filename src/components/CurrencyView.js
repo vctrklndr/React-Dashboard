@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import Container from './Container';
 
 class CurrencyView extends React.Component {
 
@@ -23,7 +23,7 @@ class CurrencyView extends React.Component {
 
   render(){ 
     return(
-      <div className="cardContainer">
+      <Container className="cardContainer">
         <h3>Currency</h3>
         <p>
           {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
@@ -32,7 +32,7 @@ class CurrencyView extends React.Component {
           Last update: {this.state.latestUpdate}
         </p>
         <button>Update</button>
-      </div>
+      </Container>
     )
   }
 }

@@ -5,7 +5,7 @@ class PostIt2 extends React.Component {
     works: JSON.parse(localStorage.getItem('works'))
   }
 
-  addNewPostIt() {
+  addNewPostIt = () => {
     let title = this.refs.title.value;
     if(title === '') {
       return null;

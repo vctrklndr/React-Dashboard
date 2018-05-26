@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import Container from './Container';
 
 class TodaysWeatherView extends React.Component {
 
@@ -22,11 +22,11 @@ class TodaysWeatherView extends React.Component {
 
   render(){ 
     return(
-      <div className="cardContainer">
+      <Container className="cardContainer">
         <h3>Weather</h3>
-        <p><b>Stockholm</b></p>
+        <h4>Stockholm</h4>
         <p>Temperature: {Math.round(this.state.weather.temp)}°C</p>
-      </div>
+      </Container>
     )
   }
 }

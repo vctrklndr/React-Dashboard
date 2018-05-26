@@ -3,7 +3,7 @@ import Clock from './Clock';
 import Timer from './Timer';
 import CurrencyView from './CurrencyView';
 import TodaysWeatherView from './TodaysWeatherView';
-import PostIt2 from './PostIt2';
+import PostIt from './PostIt';
 
 function Container(props){
   return(
@@ -12,7 +12,7 @@ function Container(props){
       <Timer />
       <CurrencyView />
       <TodaysWeatherView />
-      <PostIt2 />
+      <PostIt />
     </main>
   )
 }

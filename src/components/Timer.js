@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import Container from './Container';
 
 class Timer extends React.Component {
 
@@ -13,11 +13,11 @@ class Timer extends React.Component {
 
 render() {
     return (
-        <div className="cardContainer">
+        <Container className="cardContainer">
           <h3>Timer</h3>
           <p> {this.state.time} </p>
-          <button>Start timer!</button>
-        </div >
+          <button> Start timer! </button>
+        </Container>
     )
 }
 }

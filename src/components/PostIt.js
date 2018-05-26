@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './Container';
 import InputField from './InputField';
 import List from './List';
 
@@ -7,7 +8,6 @@ class PostIt extends React.Component {
   state = {
     name: '',
     names: [],
-    works: JSON.parse(localStorage.getItem('works')),
   }
   
   handleChange = (e) => {
@@ -24,7 +24,7 @@ class PostIt extends React.Component {
 
   render(){ 
     return(
-      <div className="cardContainer">
+      <Container className="cardContainer">
         <h3>Post-it</h3>
         <InputField handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
@@ -34,7 +34,7 @@ class PostIt extends React.Component {
         <ul>
           <List items={ this.state.names } />
         </ul>
-      </div>
+      </Container>
     )
   }
 }

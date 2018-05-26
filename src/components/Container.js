@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Container(props){
+function Container(props, className){
   return(
-    <div className="app">
+    <div className={ props.className }>
       { props.children }
     </div>
   )
