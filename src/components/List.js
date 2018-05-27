@@ -5,6 +5,9 @@ function List({ items }) {
     return(
       <li key={ index } item={ item }>
         { item }
+        <button onClick={ function(){ console.log(index) } }>
+          Delete
+        </button>
       </li>)
   });
 
