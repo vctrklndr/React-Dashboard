@@ -5,7 +5,12 @@ function List({ items }) {
     return(
       <li key={ index } item={ item }>
         { item }
-        <button onClick={ function(){ console.log(index) } }>
+        <button className="deleteButton" 
+                onClick={ 
+                  function() { 
+                    console.log(items);
+                  } }
+          >
           Delete
         </button>
       </li>)

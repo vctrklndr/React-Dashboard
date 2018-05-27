@@ -9,7 +9,7 @@ class App extends React.Component {
     
     return(
       <Container className="app">
-        <Header heading="Dashboard UI" />
+        <Header />
         <Main />
       </Container>
     )

@@ -3,39 +3,33 @@
 
 body {
   margin: 20px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Futura', sans-serif;
+  /*font-family: 'Fira Code', monospace;*/
   font-weight: 300;
   letter-spacing: .05rem;
   text-align: center;
-  background-color: #26deff;
+  background-color: #00d2ff;
 }
 
 h1 {
+  margin: 0;
   font-weight: 900;
-  color: #fc6be4;
+  font-size: 3rem;
+  color: #ffdd3e;
 }
 
-h3 {
+/* h3 {
   margin-top: 0;
 }
 
 h4 {
   margin-top: 10px;
   margin-bottom: 5px;
-}
+} */
 
 p {
-  margin: 0;
-  font-size: .8rem;
-}
-
-input {
-  padding: 5px 0 5px 10px;
-  width: 200px;
-  font-family: 'Fira Code', monospace;
-  font-size: .8rem;
-  font-weight: 300;
-  border: 1px solid #000;
+  margin: 5px;
+  font-size: .9rem;
 }
 
 ul {
@@ -43,6 +37,44 @@ ul {
   padding: 0;
   list-style: none;
   font-size: .8rem;
+}
+
+input {
+  padding: 10px 15px;
+  width: 220px;
+  font-family: 'Fira Code', monospace;
+  font-size: .8rem;
+  font-weight: 300;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+input:focus {
+  color: #000;
+  background-color: #ffdd3e;
+  transition: background-color 400ms;
+  outline: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-family: 'Fira Code', monospace;
+  font-size: .8rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  color: #fff;
+  background-color: #ff5bbb;
+  border-radius: 25px;
+  border: 0;
+  transition: background-color 400ms;
+}
+
+button:hover {
+  color: #000;
+  background-color: #ffdd3e;
+  cursor: pointer;
 }
 
 .app {
@@ -61,9 +93,18 @@ ul {
   box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 }
 
-.clock {
+.clock > h3 {
+  margin: 0;
   font-family: 'Fira Code';
   font-size: 2rem;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 700;
+}
+
+.deleteButton {
+  margin-left: 10px;
+}
+
+.cardContainer.TimerEnding {
+  background-color: #c23131;
+  transition: all 400ms;
 }

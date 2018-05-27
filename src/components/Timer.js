@@ -1,25 +1,57 @@
 import React from 'react';
 import Container from './Container';
+import Heading from './Heading';
 
 class Timer extends React.Component {
 
   state = {
-    time: 60,
+    time: 5,
   }
 
-  startTimer() {
-    this.time = setInterval(() => this.tick(), 1000);
+  startTimer = () => {
+    setInterval(() => this.tick(), 1000)
   }
 
-render() {
+  resetTimer = () => {
+    this.setState({ time: 5})
+  }
+
+  tick = () => {
+    let timeLeft = this.state.time;
+
+    if( timeLeft === 0 ) {
+      this.setState({ time: 0})
+    } else if( timeLeft > 0 ) {
+      this.setState({ time: timeLeft - 1 })
+    }
+  }
+
+  buttons = () => {
+    let timeLeft = this.state.time;
+    if (timeLeft === 0) {
+      return (
+        <button onClick={this.resetTimer}> Reset timer! </button>
+      )
+    } else if(timeLeft === 5) {
+      return (
+        <button onClick={this.startTimer}> Start timer! </button>
+      )
+    }
+  }
+
+  render() {
+    let containerClass = ["cardContainer"];
+    if(this.state.time === 0) {
+      containerClass.push('TimerEnding');
+    }
     return (
-        <Container className="cardContainer">
-          <h3>Timer</h3>
-          <p> {this.state.time} </p>
-          <button> Start timer! </button>
-        </Container>
+      <Container className={containerClass.join(' ')}>
+        <Heading heading="Timer" />
+        <p> {this.state.time} seconds</p>
+        { this.buttons() }
+      </Container>
     )
-}
+  }
 }
 
 export default Timer;

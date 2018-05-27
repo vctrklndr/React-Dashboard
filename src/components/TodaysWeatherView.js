@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import Heading from './Heading';
 
 class TodaysWeatherView extends React.Component {
 
@@ -25,7 +26,7 @@ class TodaysWeatherView extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer">
-        <h3>Weather</h3>
+        <Heading heading="Weather" />
         <h4>Stockholm</h4>
         <p>Temperature: {Math.round(this.state.weather.temp)}°C</p>
         <p>{this.state.main.description}</p>

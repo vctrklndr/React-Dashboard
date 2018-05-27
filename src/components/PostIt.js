@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import Heading from './Heading';
 import InputField from './InputField';
 import List from './List';
 
@@ -25,7 +26,7 @@ class PostIt extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer">
-        <h3>Post-it</h3>
+        <Heading heading="Post-it" />
         <InputField handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     value={this.state.name }

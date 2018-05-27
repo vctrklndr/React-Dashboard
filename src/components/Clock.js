@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import Heading from './Heading';
 
 class Clock extends React.Component {
   state = {
@@ -18,10 +19,8 @@ class Clock extends React.Component {
 
   render(){ 
     return(
-      <Container className="clock">
-        <h3>
-          {this.state.time.toLocaleTimeString()}
-        </h3>
+      <Container className="cardContainer clock">
+        <Heading heading={this.state.time.toLocaleTimeString()} />
       </Container>
     )
   }

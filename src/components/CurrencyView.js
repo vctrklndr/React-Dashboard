@@ -5,7 +5,7 @@ class CurrencyView extends React.Component {
 
   state = {
     currency: [],
-    latestUpdate: [],
+    lastUpdate: new Date().toLocaleString(),
   }
 
   componentDidMount(){
@@ -17,8 +17,17 @@ class CurrencyView extends React.Component {
       .then(response => response.json())
       .then((currency) => {
         this.setState({ currency: currency.rates });
-        this.setState({ latestUpdate: currency.date });
       })
+  }
+
+  latestUpdate = () => {
+    let date = new Date();
+    this.setState({ lastUpdate: date.toLocaleString()})
+  }
+
+  updateCurrency = () => {
+    this.fetchCurrency();
+    this.latestUpdate();
   }
 
   render(){ 
@@ -29,9 +38,9 @@ class CurrencyView extends React.Component {
           {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
         </p>
         <p>
-          Last update: {this.state.latestUpdate}
+          Last update: {this.state.lastUpdate}
         </p>
-        <button>Update</button>
+        <button onClick={this.updateCurrency}>Update</button>
       </Container>
     )
   }
