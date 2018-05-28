@@ -28,9 +28,10 @@ class Timer extends React.Component {
 
   buttons = () => {
     let timeLeft = this.state.time;
+    
     if (timeLeft === 0) {
       return (
-        <button onClick={this.resetTimer}> Reset timer! </button>
+        <button className='resetButton' onClick={this.resetTimer}> Reset timer! </button>
       )
     } else if(timeLeft === 5) {
       return (
@@ -40,14 +41,14 @@ class Timer extends React.Component {
   }
 
   render() {
-    let containerClass = ["cardContainer"];
+    let containerClass = ['cardContainer'];
     if(this.state.time === 0) {
       containerClass.push('TimerEnding');
     }
     return (
       <Container className={containerClass.join(' ')}>
         <Heading heading="Timer" />
-        <p> {this.state.time} seconds</p>
+        <p> {this.state.time} seconds </p>
         { this.buttons() }
       </Container>
     )

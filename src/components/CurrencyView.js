@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import Heading from './Heading';
 
 class CurrencyView extends React.Component {
 
@@ -33,14 +34,14 @@ class CurrencyView extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer">
-        <h3>Currency</h3>
+        <Heading heading="Currency" />
         <p>
           {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
         </p>
         <p>
-          Last update: {this.state.lastUpdate}
+          <strong>Last update:</strong> {this.state.lastUpdate}
         </p>
-        <button onClick={this.updateCurrency}>Update</button>
+        <button onClick={this.updateCurrency}> Update </button>
       </Container>
     )
   }

@@ -12,7 +12,7 @@ function InputField({ handleChange, handleSubmit, value, placeholder }) {
             id="postItInput"
             className="input"
             value={value} 
-            onChange={ handleChange}
+            onChange={ handleChange }
             onKeyDown={ handleSubmit }
             placeholder={placeholder}
     />

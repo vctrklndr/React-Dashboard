@@ -11,7 +11,9 @@ class PostIt2 extends React.Component {
       return null;
     }
     let works = JSON.parse(localStorage.getItem('works'));
+
     works.push(title);
+    
     localStorage.setItem('works', JSON.stringify(works));
     this.setState({
       works: JSON.parse(localStorage.getItem('works'))

@@ -19,6 +19,7 @@ class PostIt extends React.Component {
     if(e.keyCode === 13){
       let newNames = [...this.state.names];
       newNames.push(this.state.name);
+      console.log(newNames)
       this.setState({ names: newNames, name: '' });
     }
   }
