@@ -23,7 +23,7 @@ class CurrencyView extends React.Component {
 
   latestUpdate = () => {
     let date = new Date();
-    this.setState({ lastUpdate: date.toLocaleString()})
+    this.setState({ lastUpdate: date.toLocaleString()});
   }
 
   updateCurrency = () => {
@@ -34,7 +34,7 @@ class CurrencyView extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer">
-        <Heading heading="Currency" />
+        <Heading title="Currency" />
         <p>
           {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
         </p>

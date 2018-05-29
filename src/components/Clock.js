@@ -20,7 +20,7 @@ class Clock extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer clock">
-        <Heading heading={this.state.time.toLocaleTimeString()} />
+        <Heading title={this.state.time.toLocaleTimeString()} />
       </Container>
     )
   }

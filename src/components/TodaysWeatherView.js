@@ -26,7 +26,7 @@ class TodaysWeatherView extends React.Component {
   render(){ 
     return(
       <Container className="cardContainer">
-        <Heading heading="Todays weather" />
+        <Heading title="Todays weather" />
         <h4>Stockholm</h4>
         <p>Temperature: {Math.round(this.state.weather.temp)}°C</p>
         <p>{this.state.main.description}</p>

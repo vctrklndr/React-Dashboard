@@ -5,15 +5,16 @@ import Heading from './Heading';
 class Timer extends React.Component {
 
   state = {
-    time: 5,
+    time: 60,
   }
 
   startTimer = () => {
-    setInterval(() => this.tick(), 1000)
+    this.interval = setInterval(() => this.tick(), 1000)
   }
 
   resetTimer = () => {
-    this.setState({ time: 5})
+    clearInterval(this.interval);
+    this.setState({ time: 60 })
   }
 
   tick = () => {
@@ -33,7 +34,7 @@ class Timer extends React.Component {
       return (
         <button className='resetButton' onClick={this.resetTimer}> Reset timer! </button>
       )
-    } else if(timeLeft === 5) {
+    } else if(timeLeft === 60) {
       return (
         <button onClick={this.startTimer}> Start timer! </button>
       )
@@ -47,7 +48,7 @@ class Timer extends React.Component {
     }
     return (
       <Container className={containerClass.join(' ')}>
-        <Heading heading="Timer" />
+        <Heading title="Timer" />
         <p> {this.state.time} seconds </p>
         { this.buttons() }
       </Container>

@@ -4,7 +4,6 @@
 body {
   margin: 20px;
   font-family: 'Futura', sans-serif;
-  /*font-family: 'Fira Code', monospace;*/
   font-weight: 300;
   letter-spacing: .05rem;
   text-align: center;
@@ -18,14 +17,9 @@ h1 {
   color: #ffdd3e;
 }
 
-/* h3 {
+h3 {
   margin-top: 0;
 }
-
-h4 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-} */
 
 p {
   margin: 5px;

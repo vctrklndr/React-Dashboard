@@ -12,30 +12,27 @@ class PostIt extends React.Component {
   }
   
   handleChange = (e) => {
-    this.setState({ [e.target.name] : e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   handleSubmit = (e) => {
     if(e.keyCode === 13){
-      let newNames = [...this.state.names];
-      newNames.push(this.state.name);
-      console.log(newNames)
-      this.setState({ names: newNames, name: '' });
+      let listItem = [...this.state.names];
+      listItem.push(this.state.name);
+      this.setState({ names: listItem, name: '' });
     }
   }
 
   render(){ 
     return(
       <Container className="cardContainer">
-        <Heading heading="Post-it" />
+        <Heading title="Post-it" />
         <InputField handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
-                    value={this.state.name }
+                    value={this.state.name}
                     placeholder="Stuff you need to remember"
         />
-        <ul>
-          <List items={ this.state.names } />
-        </ul>
+        <List items={ this.state.names } />
       </Container>
     )
   }
