@@ -34,9 +34,12 @@ ul {
 }
 
 li {
+  margin: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 input {
@@ -101,12 +104,12 @@ button:hover {
   font-weight: 700;
 }
 
-.deleteButton {
-  margin-left: 10px;
-}
-
 .resetButton {
   background-color: #000;
+}
+
+.error {
+  color: #ff0000;
 }
 
 .cardContainer.TimerEnding {
@@ -114,6 +117,23 @@ button:hover {
   transition: all 400ms;
   -webkit-animation: heartbeat 1.5s ease-in-out 1 both;
 	        animation: heartbeat 1.5s ease-in-out 1 both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes heartbeat {

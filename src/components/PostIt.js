@@ -16,6 +16,7 @@ class PostIt extends React.Component {
   state = {
     name: '',
     items: getFromLocalStorage(),
+    error: '',
   }
   
   handleChange = (e) => {
@@ -24,16 +25,26 @@ class PostIt extends React.Component {
 
   handleSubmit = (e) => {
     if(e.keyCode === 13){
+      const declaration = this.state.name.length < 3;
+      if(declaration === true) {
+        this.setState( {error: 'Please enter at least three characters!'} );
+        return null;
+      }
+      this.setState( {error: ''} );
+      
       let listItems = [...this.state.items];
       listItems.push(this.state.name);
       
-      localStorage.setItem('store', JSON.stringify(listItems))
+      localStorage.setItem('store', JSON.stringify(listItems));
       this.setState({ items: listItems, name: '' });
     }
   }
 
-  deleteItem = () => {
-    console.log("Hej");
+  deleteListItem = (post) => {
+    const newList = this.state.items.filter((item, index) => index !== post);
+
+    this.setState({items: newList});
+    localStorage.setItem('store', JSON.stringify(newList));
   }
 
   render(){ 
@@ -42,10 +53,11 @@ class PostIt extends React.Component {
         <Heading title="Post-it" />
         <InputField handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
-                    value={this.state.name}
+                    value={ this.state.name }
                     placeholder="Stuff you need to remember"
         />
-        <List items={ this.state.items } onClick={this.deleteItem} />
+        <p className="error">{ this.state.error }</p>
+        <List items={ this.state.items } deleteListItem={ this.deleteListItem } />
       </Container>
     )
   }
