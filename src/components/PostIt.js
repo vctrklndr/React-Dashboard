@@ -4,11 +4,18 @@ import Heading from './Heading';
 import InputField from './InputField';
 import List from './List';
 
-class PostIt extends React.Component {
+function getFromLocalStorage(){
+  const store = JSON.parse(localStorage.getItem('store'));
+  if(store){
+    return store;
+  }
+  return [];
+}
 
+class PostIt extends React.Component {
   state = {
     name: '',
-    items: JSON.parse(localStorage.getItem('store')),
+    items: getFromLocalStorage(),
   }
   
   handleChange = (e) => {
@@ -25,6 +32,10 @@ class PostIt extends React.Component {
     }
   }
 
+  deleteItem = () => {
+    console.log("Hej");
+  }
+
   render(){ 
     return(
       <Container className="cardContainer">
@@ -34,7 +45,7 @@ class PostIt extends React.Component {
                     value={this.state.name}
                     placeholder="Stuff you need to remember"
         />
-        <List items={ this.state.items } />
+        <List items={ this.state.items } onClick={this.deleteItem} />
       </Container>
     )
   }
