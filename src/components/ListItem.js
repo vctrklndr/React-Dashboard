@@ -4,7 +4,7 @@ function ListItem({ item }) {
   return (
     <li>
       { item }
-      <button onClick={console.log("Hej")}> Delete </button>
+      <button className="button">Delete</button>
     </li>
   );
 }

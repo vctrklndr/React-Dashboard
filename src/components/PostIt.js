@@ -8,7 +8,7 @@ class PostIt extends React.Component {
 
   state = {
     name: '',
-    names: [],
+    items: JSON.parse(localStorage.getItem('store')),
   }
   
   handleChange = (e) => {
@@ -17,9 +17,11 @@ class PostIt extends React.Component {
 
   handleSubmit = (e) => {
     if(e.keyCode === 13){
-      let listItem = [...this.state.names];
-      listItem.push(this.state.name);
-      this.setState({ names: listItem, name: '' });
+      let listItems = [...this.state.items];
+      listItems.push(this.state.name);
+      
+      localStorage.setItem('store', JSON.stringify(listItems))
+      this.setState({ items: listItems, name: '' });
     }
   }
 
@@ -32,7 +34,7 @@ class PostIt extends React.Component {
                     value={this.state.name}
                     placeholder="Stuff you need to remember"
         />
-        <List items={ this.state.names } />
+        <List items={ this.state.items } />
       </Container>
     )
   }

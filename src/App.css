@@ -33,6 +33,12 @@ ul {
   font-size: .8rem;
 }
 
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 input {
   padding: 10px 15px;
   width: 220px;
