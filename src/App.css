@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: RobotoMono;
-  src: url(components/fonts/RobotoMono-Light.ttf);
+  src: url(components/fonts/robotomono-light.ttf);
 }
 
 body {
@@ -83,7 +83,7 @@ p {
 .clock > h3 {
   margin: 0;
   padding: 0;
-  font-family: 'Circular-black', monospace;
+  font-family: 'Circular-black', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   background-image: none;
@@ -92,7 +92,7 @@ p {
 button {
   margin-top: 10px;
   padding: 10px 15px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'RobotoMono', monospace;
   font-size: .8rem;
   font-weight: 300;
   letter-spacing: .08rem;
