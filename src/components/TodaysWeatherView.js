@@ -5,10 +5,12 @@ import WeatherIcon from './WeatherIcon';
 import ClearSky from './images/01d.svg';
 import ClearSkyNight from './images/01n.svg';
 import FewClouds from './images/02d.svg';
+import FewCloudsNight from './images/02n.svg';
 import ScatteredClouds from './images/03d.svg';
 import BrokenClouds from './images/04d.svg';
 import ShowerRain from './images/09d.svg';
 import Rain from './images/10d.svg';
+import RainNight from './images/10n.svg';
 import ThunderStorm from './images/11d.svg';
 import Snow from './images/13d.svg';
 import Mist from './images/50d.svg';
@@ -48,6 +50,9 @@ class TodaysWeatherView extends React.Component {
       case '02d':
         return <WeatherIcon src={ FewClouds } alt="Few clouds" />
 
+      case '02n':
+        return <WeatherIcon src={ FewCloudsNight } alt="Few clouds" />
+
       case '03d' || '03n':
         return <WeatherIcon src={ ScatteredClouds } alt="Scattered clouds" />
 
@@ -59,6 +64,9 @@ class TodaysWeatherView extends React.Component {
 
       case '10d':
         return <WeatherIcon src={ Rain } alt="Rain" />
+
+      case '10n':
+        return <WeatherIcon src={ RainNight } alt="Rain" />
 
       case '11d' || '11n':
         return <WeatherIcon src={ ThunderStorm } alt="Thunderstorm" />
