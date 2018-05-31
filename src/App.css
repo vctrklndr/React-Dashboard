@@ -118,7 +118,8 @@ input {
   text-align: center;
   border: 0;
   border-bottom: 1px solid #000;
-  -webkit-appearance: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 input:focus {
