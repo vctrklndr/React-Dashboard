@@ -86,6 +86,14 @@ p {
   background-image: none;
 }
 
+.timer {
+  font-size: 2rem;
+}
+
+.currency {
+  font-size: 1.6rem;
+}
+
 button {
   margin-top: 10px;
   padding: 10px 15px;
@@ -140,7 +148,7 @@ input:focus {
 }
 
 ul {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   padding: 0;
   list-style: none;
   font-size: 1rem;
@@ -187,7 +195,7 @@ img.weatherIcons {
 
   .wrapper {
     width: auto;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   h1 {

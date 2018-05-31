@@ -52,7 +52,7 @@ class Timer extends React.Component {
     return (
       <Container className={containerClass.join(' ')}>
         <Heading title="Timer" />
-        <p> { time } seconds </p>
+        <p className="timer"> { time } seconds </p>
         { buttons() }
       </Container>
     )
