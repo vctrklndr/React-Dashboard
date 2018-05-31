@@ -172,6 +172,7 @@ img.weatherIcons {
 
   .cardContainer {
     min-width: 300px;
+    max-width: 300px;
   }
 
   input {
