@@ -1,12 +1,14 @@
 import React from 'react';
 import Button from './Button';
 
-function List({ items, deleteListItem }) {
+function List({ items, handleChange, deleteListItem }) {
   let list = items.map( (item, index) => {
     return (
-      <li key={index}>
+      <li key={ index }>
         { item }
-        <Button handleChange={ () => deleteListItem(index) } value="Delete" />
+        <Button handleChange={ () => deleteListItem(index) } 
+                value="Delete" 
+        />
       </li>
     )
   });

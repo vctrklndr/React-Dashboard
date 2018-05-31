@@ -18,13 +18,16 @@ class CurrencyView extends React.Component {
       .then(response => response.json())
       .then((currency) => {
         this.setState({ currency: currency.rates });
-      });
+      })
+      .catch = (error) => {
+        console.log(error);
+      }
   }
 
   latestUpdate = () => {
     let date = new Date();
     this.setState({ 
-      lastUpdate: date.toLocaleString() 
+      lastUpdate: date.toLocaleString()
     });
   }
 
