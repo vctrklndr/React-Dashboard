@@ -19,7 +19,7 @@ import Mist from './images/50d.svg';
 class TodaysWeatherView extends React.Component {
   state = {
     weather: [],
-    main: 'few clouds',
+    main: [],
   }
 
   componentDidMount(){
