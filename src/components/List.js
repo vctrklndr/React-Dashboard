@@ -1,13 +1,15 @@
 import React from 'react';
-import Button from './Button';
+import X from './images/x.svg';
 
-function List({ items, handleChange, deleteListItem }) {
+function List({ items, deleteListItem }) {
   let list = items.map( (item, index) => {
     return (
       <li key={ index }>
         { item }
-        <Button className="deleteButton" handleChange={ () => deleteListItem(index) } 
-                value="Delete" 
+        <img  src={ X } 
+              id="closeButton"
+              onClick={ () => deleteListItem(index) } 
+              alt="Delete post"
         />
       </li>
     )
