@@ -201,7 +201,7 @@ img.weatherIcons {
 
   .wrapper {
     width: auto;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   h1 {
