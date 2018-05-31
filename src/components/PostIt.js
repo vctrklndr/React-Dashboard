@@ -55,7 +55,7 @@ class PostIt extends React.Component {
         <InputField handleChange={ handleChange }
                     handleSubmit={ handleSubmit }
                     value={ name }
-                    placeholder="Stuff you need to remember"
+                    placeholder="What to remember?"
         />
         <p className="error">{ error }</p>
         <List items={ items } deleteListItem={ deleteListItem } />
