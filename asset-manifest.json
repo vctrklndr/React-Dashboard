@@ -1,6 +1,6 @@
 {
-  "main.css": "static/css/main.7a1e7b34.css",
-  "main.css.map": "static/css/main.7a1e7b34.css.map",
+  "main.css": "static/css/main.de8e026a.css",
+  "main.css.map": "static/css/main.de8e026a.css.map",
   "main.js": "static/js/main.40d9cb63.js",
   "main.js.map": "static/js/main.40d9cb63.js.map",
   "static/media/01d.svg": "static/media/01d.a82069ff.svg",
@@ -15,7 +15,7 @@
   "static/media/11d.svg": "static/media/11d.58fab0dc.svg",
   "static/media/13d.svg": "static/media/13d.109cc8d7.svg",
   "static/media/50d.svg": "static/media/50d.2ecfcf0e.svg",
-  "static/media/RobotoMono-Light.ttf": "static/media/RobotoMono-Light.b82d827b.ttf",
   "static/media/circular-black.otf": "static/media/circular-black.7f42d848.otf",
-  "static/media/circular-book.otf": "static/media/circular-book.6365c40a.otf"
+  "static/media/circular-book.otf": "static/media/circular-book.6365c40a.otf",
+  "static/media/robotomono-light.ttf": "static/media/robotomono-light.b82d827b.ttf"
 }
