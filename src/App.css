@@ -16,8 +16,9 @@ body {
   font-weight: 300;
   letter-spacing: .05rem;
   text-align: center;
-  background-color: #00d2ff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23007f9a' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: #f2f2f2;
+  /* background-color: #00d2ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23007f9a' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
 }
 
 .app {
@@ -35,12 +36,17 @@ h1 {
   margin: 0;
   font-size: 2.4rem;
   padding: 0 20px;
-  background-color: #ffdd3e;
-  color: #ff5bbb;
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  /* background-color: #ffdd3e;
+  color: #ff5bbb; */
 }
 
 h3 {
   margin-top: 0;
+  padding: 10px 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 h4 {
@@ -69,9 +75,11 @@ p {
 
 .clock > h3 {
   margin: 0;
+  padding: 0;
   font-family: 'Circular-black', monospace;
   font-size: 2rem;
   font-weight: 700;
+  background-image: none;
 }
 
 button {
@@ -82,7 +90,7 @@ button {
   font-weight: 300;
   letter-spacing: .08rem;
   color: #fff;
-  background-color: #ff5bbb;
+  background-color: #000;
   border-radius: 25px;
   border: 0;
   transition: background-color 400ms;
@@ -110,6 +118,7 @@ input {
   text-align: center;
   border: 0;
   border-bottom: 1px solid #000;
+  -webkit-appearance: none;
 }
 
 input:focus {
@@ -147,6 +156,11 @@ img.weatherIcons {
   color: #ff0000;
 }
 
+::selection {
+  background: #ffdd3e;
+  color: #000;
+}
+
 @media screen and (max-width: 320px) {
   h1 {
     font-size: 2rem;
@@ -172,6 +186,7 @@ img.weatherIcons {
 
   .cardContainer {
     min-width: 300px;
+    max-width: 300px;
   }
 
   input {
