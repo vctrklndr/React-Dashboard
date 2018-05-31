@@ -17,6 +17,14 @@ body {
   letter-spacing: .05rem;
   text-align: center;
   background-color: #00d2ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2300a8cc' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1, h3, h4, strong {
@@ -26,7 +34,10 @@ h1, h3, h4, strong {
 h1 {
   margin: 0;
   font-size: 4rem;
-  color: #ffdd3e;
+  padding: 0 20px;
+  background-color: #ffdd3e;
+  color: #ff5bbb;
+  /* color: #ffdd3e; */
 }
 
 h3 {
@@ -42,41 +53,27 @@ p {
   font-size: .9rem;
 }
 
-ul {
-  margin: 10px 0 0 0;
-  padding: 0;
-  list-style: none;
-  font-size: .8rem;
+.cardContainer {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 }
 
-li {
-  margin: 10px 0;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  border-bottom: 1px solid #f2f2f2;
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+.cardContainer.TimerEnding {
+  background-color: #c23131;
+  transition: all 400ms;
+  -webkit-animation: heartbeat 1.5s ease-in-out 1 both;
+          animation: heartbeat 1.5s ease-in-out 1 both;
 }
 
-input {
-  padding: 10px 15px;
-  width: 270px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: .8rem;
-  font-weight: 300;
-  text-align: center;
-  border: 0;
-  border-bottom: 1px solid #000;
-}
-
-input:focus {
-  color: #000;
-  background-color: #ffdd3e;
-  transition: background-color 400ms;
-  outline: none;
+.clock > h3 {
+  margin: 0;
+  font-family: 'Circular-black', monospace;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 button {
@@ -99,35 +96,53 @@ button:hover {
   cursor: pointer;
 }
 
-.deleteButton {
-  margin: 0 0 0 10px;
-}
-
 .resetButton {
   background-color: #000;
 }
 
-.app {
+.deleteButton {
+  margin: 0 0 0 10px;
+}
+
+input {
+  padding: 10px 15px;
+  width: 270px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: .8rem;
+  font-weight: 300;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+input:focus {
+  color: #000;
+  background-color: #ffdd3e;
+  transition: background-color 400ms;
+  outline: none;
+}
+
+ul {
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .8rem;
+}
+
+li {
+  margin: 10px 0;
+  padding-bottom: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  text-align: left;
+  border-bottom: 1px solid #f2f2f2;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.cardContainer {
-  margin: 20px;
-  padding: 20px;
-  width: 300px;
-  background-color: #fff;
-  border: 1px solid #000;
-  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
-}
-
-.clock > h3 {
-  margin: 0;
-  font-family: 'Circular-black', monospace;
-  font-size: 2rem;
-  font-weight: 700;
+img.weatherIcons {
+  width: 100px;
 }
 
 .error {
@@ -135,23 +150,11 @@ button:hover {
   color: #ff0000;
 }
 
-.cardContainer.TimerEnding {
-  background-color: #c23131;
-  transition: all 400ms;
-  -webkit-animation: heartbeat 1.5s ease-in-out 1 both;
-	        animation: heartbeat 1.5s ease-in-out 1 both;
-}
-
-img.weatherIcons {
-  width: 100px;
-}
-
 @media screen and (min-width: 1120px) {
   main {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
   }
 }
 
@@ -163,6 +166,7 @@ img.weatherIcons {
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
