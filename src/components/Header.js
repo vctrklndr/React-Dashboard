@@ -3,7 +3,11 @@ import React from 'react';
 function Header(props){
   return(
     <header className="header">
-        <h1> Dashboard UI </h1>
+        <h1>
+          <span className="headingBackground">
+            Dashboard
+          </span>
+        </h1>
     </header>
   )
 }

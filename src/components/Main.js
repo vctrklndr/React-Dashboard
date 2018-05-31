@@ -8,11 +8,11 @@ import PostIt from './PostIt';
 function Main(){
   return(
     <main>
-      <div>
+      <div className="wrapper">
         <Clock />
         <TodaysWeatherView />
       </div>
-      <div>
+      <div className="wrapper">
         <Timer />
         <CurrencyView />
       </div>

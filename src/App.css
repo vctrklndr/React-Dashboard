@@ -17,15 +17,17 @@ body {
   letter-spacing: .05rem;
   text-align: center;
   background-color: #f2f2f2;
-  /* background-color: #00d2ff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23007f9a' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
 }
 
-.app {
+main {
+  margin-top: 10px;
+}
+
+main, .wrapper {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 h1, h3, h4, strong {
@@ -34,18 +36,18 @@ h1, h3, h4, strong {
 
 h1 {
   margin: 0;
-  font-size: 2.4rem;
-  padding: 0 20px;
-  background-color: #f2f2f2;
+  padding: 0;
+  font-size: 3.4rem;
+}
+
+.headingBackground {
+  padding: 0px 20px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  /* background-color: #ffdd3e;
-  color: #ff5bbb; */
 }
 
 h3 {
   margin-top: 0;
   padding: 10px 0;
-  background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -59,8 +61,10 @@ p {
 }
 
 .cardContainer {
-  margin: 20px;
-  padding: 20px;
+  margin: 15px 20px;
+  padding: 20px 20px;
+  width: calc(100% - 40px);
+  max-width: 500px;
   background-color: #fff;
   border: 1px solid #000;
   box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
@@ -69,8 +73,8 @@ p {
 .cardContainer.TimerEnding {
   background-color: #c23131;
   transition: all 400ms;
-  -webkit-animation: heartbeat 1.5s ease-in-out 1 both;
-          animation: heartbeat 1.5s ease-in-out 1 both;
+  -webkit-animation: alert 1.5s ease-in-out 1 both;
+          animation: alert 1.5s ease-in-out 1 both;
 }
 
 .clock > h3 {
@@ -107,11 +111,12 @@ button:hover {
 }
 
 .deleteButton {
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 
 input {
   padding: 10px 15px;
+  width: calc(100% - 30px);
   font-family: 'Roboto Mono', monospace;
   font-size: 1rem;
   font-weight: 300;
@@ -164,21 +169,20 @@ img.weatherIcons {
 
 @media screen and (max-width: 320px) {
   h1 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .cardContainer {
-    min-width: 500px;
+    font-size: 2.8rem;
   }
 }
 
 @media screen and (min-width: 1120px) {
   main {
-    height: 100%;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: stretch;
+  }
+
+  .wrapper {
+    width: auto;
+    justify-content: flex-start;
   }
 
   h1 {
@@ -191,7 +195,6 @@ img.weatherIcons {
   }
 
   input {
-    width: 270px;
     font-size: .8rem;
   }
 }
@@ -214,7 +217,7 @@ img.weatherIcons {
   }
 }
 
-@-webkit-keyframes heartbeat {
+@-webkit-keyframes alert {
   from {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -249,7 +252,7 @@ img.weatherIcons {
   }
 }
 
-@keyframes heartbeat {
+@keyframes alert {
   from {
     -webkit-transform: scale(1);
             transform: scale(1);
