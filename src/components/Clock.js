@@ -11,17 +11,18 @@ class Clock extends React.Component {
     setInterval(() => this.localTime(), 1000)
   }
 
-  localTime() {
+  localTime = () => {
     this.setState({
       time: new Date()
     });
   }
 
   render(){ 
-    const { time} = this.state;
+    const { time } = this.state;
     return(
       <Container className="cardContainer clock">
         <Heading title={ time.toLocaleTimeString() } />
+        <p>{ time.toLocaleDateString() }</p>
       </Container>
     )
   }

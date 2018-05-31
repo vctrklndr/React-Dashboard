@@ -6,7 +6,7 @@ function List({ items, handleChange, deleteListItem }) {
     return (
       <li key={ index }>
         { item }
-        <Button handleChange={ () => deleteListItem(index) } 
+        <Button className="deleteButton" handleChange={ () => deleteListItem(index) } 
                 value="Delete" 
         />
       </li>
