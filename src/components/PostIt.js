@@ -25,8 +25,7 @@ class PostIt extends React.Component {
 
   handleSubmit = (e) => {
     if(e.keyCode === 13){
-      const declaration = this.state.name.length < 3;
-      if(declaration === true) {
+      if(this.state.name.length < 3) {
         this.setState( {error: 'Please enter at least three characters!'} );
         return null;
       }
@@ -48,16 +47,18 @@ class PostIt extends React.Component {
   }
 
   render(){ 
+    const { name, items, error } = this.state;
+    const { handleChange, handleSubmit, deleteListItem } = this;
     return(
       <Container className="cardContainer">
         <Heading title="Post-it" />
-        <InputField handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    value={ this.state.name }
+        <InputField handleChange={ handleChange }
+                    handleSubmit={ handleSubmit }
+                    value={ name }
                     placeholder="Stuff you need to remember"
         />
-        <p className="error">{ this.state.error }</p>
-        <List items={ this.state.items } deleteListItem={ this.deleteListItem } />
+        <p className="error">{ error }</p>
+        <List items={ items } deleteListItem={ deleteListItem } />
       </Container>
     )
   }

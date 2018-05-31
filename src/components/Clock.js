@@ -14,13 +14,14 @@ class Clock extends React.Component {
   localTime() {
     this.setState({
       time: new Date()
-    })
+    });
   }
 
   render(){ 
+    const { time} = this.state;
     return(
       <Container className="cardContainer clock">
-        <Heading title={this.state.time.toLocaleTimeString()} />
+        <Heading title={ time.toLocaleTimeString() } />
       </Container>
     )
   }

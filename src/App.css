@@ -1,9 +1,18 @@
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
-@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700);
+/* @import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css); */
+
+@font-face {
+  font-family: Circular-Black;
+  src: url(components/fonts/circular-black.otf);
+}
+
+@font-face {
+  font-family: Circular-Book;
+  src: url(components/fonts/circular-book.otf);
+}
 
 body {
   margin: 20px;
-  font-family: 'Futura', sans-serif;
+  font-family: 'Circular-Book', sans-serif;
   font-weight: 300;
   letter-spacing: .05rem;
   text-align: center;
@@ -12,18 +21,28 @@ body {
 
 h1 {
   margin: 0;
-  font-weight: 900;
+  font-family: 'Circular-Black', sans-serif;
   font-size: 3rem;
   color: #ffdd3e;
 }
 
 h3 {
+  font-family: 'Circular-Black', sans-serif;
   margin-top: 0;
+}
+
+h4 {
+  font-family: 'Circular-Black', sans-serif;
+  margin-bottom: 0;
 }
 
 p {
   margin: 5px;
   font-size: .9rem;
+}
+
+strong {
+  font-family: 'Circular-Black', sans-serif;
 }
 
 ul {
@@ -63,10 +82,10 @@ input:focus {
 button {
   margin-top: 10px;
   padding: 10px 15px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Circular-Book', monospace;
   font-size: .8rem;
   font-weight: 300;
-  letter-spacing: .05rem;
+  letter-spacing: .08rem;
   color: #fff;
   background-color: #ff5bbb;
   border-radius: 25px;
@@ -99,7 +118,7 @@ button:hover {
 
 .clock > h3 {
   margin: 0;
-  font-family: 'Fira Code';
+  font-family: 'Circular-black', monospace;
   font-size: 2rem;
   font-weight: 700;
 }

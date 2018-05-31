@@ -1,9 +1,9 @@
 import React from 'react';
 import Container from './Container';
 import Heading from './Heading';
+import Button from './Button';
 
 class CurrencyView extends React.Component {
-
   state = {
     currency: [],
     lastUpdate: new Date().toLocaleString(),
@@ -18,12 +18,14 @@ class CurrencyView extends React.Component {
       .then(response => response.json())
       .then((currency) => {
         this.setState({ currency: currency.rates });
-      })
+      });
   }
 
   latestUpdate = () => {
     let date = new Date();
-    this.setState({ lastUpdate: date.toLocaleString()});
+    this.setState({ 
+      lastUpdate: date.toLocaleString() 
+    });
   }
 
   updateCurrency = () => {
@@ -32,16 +34,18 @@ class CurrencyView extends React.Component {
   }
 
   render(){ 
+    const { currency, lastUpdate } = this.state;
+    const { updateCurrency } = this;
     return(
       <Container className="cardContainer">
         <Heading title="Currency" />
         <p>
-          {this.state.currency.EUR} EUR = {this.state.currency.SEK} SEK
+          { currency.EUR } EUR = { currency.SEK } SEK
         </p>
         <p>
-          <strong>Last update:</strong> {this.state.lastUpdate}
+          <strong>Last update:</strong> { lastUpdate }
         </p>
-        <button onClick={this.updateCurrency}> Update </button>
+        <Button handleChange={ updateCurrency } value="Update" />
       </Container>
     )
   }

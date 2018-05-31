@@ -3,7 +3,6 @@ import Container from './Container';
 import Heading from './Heading';
 
 class TodaysWeatherView extends React.Component {
-
   state = {
     weather: [],
     main: [],
@@ -19,17 +18,19 @@ class TodaysWeatherView extends React.Component {
       return response.json();
     }).then((weather) => {
         this.setState({ weather: weather.main });
-        this.setState({ main: weather.weather[0] })
+        this.setState({ main: weather.weather[0] });
       })
   }
 
   render(){ 
+    const { weather, main } = this.state;
+    //const { handleChange, handleSubmit, deleteListItem } = this;
     return(
       <Container className="cardContainer">
         <Heading title="Todays weather" />
         <h4>Stockholm</h4>
-        <p>Temperature: {Math.round(this.state.weather.temp)}°C</p>
-        <p>{this.state.main.description}</p>
+        <p>Temperature: {Math.round( weather.temp )}°C</p>
+        <p>{ main.description }</p>
       </Container>
     )
   }

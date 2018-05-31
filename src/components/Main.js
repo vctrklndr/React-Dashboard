@@ -5,7 +5,7 @@ import CurrencyView from './CurrencyView';
 import TodaysWeatherView from './TodaysWeatherView';
 import PostIt from './PostIt';
 
-function Container(props){
+function Main(){
   return(
     <main>
       <Clock />
@@ -17,4 +17,4 @@ function Container(props){
   )
 }
 
-export default Container;
+export default Main;
