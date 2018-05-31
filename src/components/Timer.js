@@ -27,33 +27,43 @@ class Timer extends React.Component {
     }
   }
 
-  buttons = () => {
+  timerView = () => {
     let timeLeft = this.state.time;
     
     if (timeLeft === 0) {
       return (
-        <Button className="resetButton" handleChange={ this.resetTimer } value="Reset timer!" />
+        <Container>
+          <p className="timer">
+            { timeLeft } seconds
+          </p>
+          <Button className="resetButton" handleChange={ this.resetTimer } value="Reset timer!" />
+        </Container>
       )
     } else if(timeLeft === 60) {
       return (
-        <Button handleChange={ this.startTimer } value="Start timer!" />
+        <Container>
+          <p className="timer">
+            { timeLeft } seconds
+          </p>
+          <Button handleChange={ this.startTimer } value="Start timer!" />
+        </Container>
       )
     }
+    return <p className="timerBig"> { timeLeft } </p>
   }
 
   render() {
     const { time } = this.state;
-    const { buttons } = this;
+    const { timerView } = this;
 
     const containerClass = ['cardContainer'];
     if(time === 0) {
-      containerClass.push('TimerEnding');
+      containerClass.push('timerEnding');
     }
     return (
       <Container className={containerClass.join(' ')}>
         <Heading title="Timer" />
-        <p> { time } seconds </p>
-        { buttons() }
+        { timerView() }
       </Container>
     )
   }

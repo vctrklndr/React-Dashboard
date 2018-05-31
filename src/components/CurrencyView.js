@@ -40,9 +40,9 @@ class CurrencyView extends React.Component {
     const { currency, lastUpdate } = this.state;
     const { updateCurrency } = this;
     return(
-      <Container className="cardContainer">
+      <Container className="cardContainer marginFix">
         <Heading title="Currency" />
-        <p>
+        <p className="currency">
           { currency.EUR } EUR = { currency.SEK } SEK
         </p>
         <p>

@@ -54,6 +54,7 @@ h3 {
 }
 
 h4 {
+  margin-top: 12px;
   margin-bottom: 0;
 }
 
@@ -71,8 +72,8 @@ p {
   box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 }
 
-.cardContainer.TimerEnding {
-  background-color: #c23131;
+.timerEnding {
+  background-color: #ff0000;
   transition: all 400ms;
   -webkit-animation: alert 1.5s ease-in-out 1 both;
           animation: alert 1.5s ease-in-out 1 both;
@@ -84,6 +85,19 @@ p {
   font-family: 'Circular-black', sans-serif;
   font-size: 2rem;
   background-image: none;
+}
+
+.timer {
+  font-size: 2rem;
+}
+
+.timerBig {
+  font-family: 'Circular-black', sans-serif;
+  font-size: 4.3rem;
+}
+
+.currency {
+  font-size: 1.6rem;
 }
 
 button {
@@ -140,7 +154,7 @@ input:focus {
 }
 
 ul {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   padding: 0;
   list-style: none;
   font-size: 1rem;
@@ -159,7 +173,7 @@ li {
 }
 
 img.weatherIcons {
-  width: 100px;
+  height: 100px;
 }
 
 .error {
@@ -197,6 +211,10 @@ img.weatherIcons {
   .cardContainer {
     min-width: 300px;
     max-width: 300px;
+  }
+
+  .marginFix {
+    margin-top: 15px;
   }
 
   input {
