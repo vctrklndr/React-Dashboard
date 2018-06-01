@@ -1,0 +1,29 @@
+@media screen and (min-width: 1120px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .wrapper {
+    width: auto;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .cardContainer {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .marginFix {
+    margin-top: 15px;
+  }
+
+  input {
+    font-size: .8rem;
+  }
+}

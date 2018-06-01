@@ -34,7 +34,7 @@ class Timer extends React.Component {
       return (
         <Container>
           <p className="timer">
-            { timeLeft } seconds
+            Time's up!
           </p>
           <Button className="resetButton" handleChange={ this.resetTimer } value="Reset timer!" />
         </Container>
