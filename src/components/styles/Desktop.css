@@ -26,4 +26,9 @@
   input {
     font-size: .8rem;
   }
+
+  ul {
+    max-height: 283px;
+    overflow: scroll;
+  }
 }
