@@ -24,7 +24,6 @@
     }
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "merge": ">=1.2.1"
+    "gh-pages": "^1.1.0"
   }
 }
