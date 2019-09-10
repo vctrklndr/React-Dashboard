@@ -2,10 +2,10 @@ import React from 'react';
 import Container from './Container';
 import Header from './Header';
 import Main from './Main';
-import './styles/Fonts.css';
-import './styles/App.css';
-import './styles/Keyframes.css';
-import './styles/Desktop.css';
+import './Styles/Fonts.css';
+import './Styles/App.css';
+import './Styles/Keyframes.css';
+import './Styles/Desktop.css';
 
 class App extends React.Component {
   render(){ 

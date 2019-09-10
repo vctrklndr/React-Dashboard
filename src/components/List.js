@@ -1,5 +1,5 @@
 import React from 'react';
-import X from './images/x.svg';
+import X from './Images/x.svg';
 
 function List({ items, deleteListItem }) {
   let list = items.map( (item, index) => {

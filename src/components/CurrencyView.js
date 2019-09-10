@@ -1,56 +1,60 @@
-import React from 'react';
-import Container from './Container';
-import Heading from './Heading';
-import Button from './Button';
+import React from "react";
+import Container from "./Container";
+import Heading from "./Heading";
+import Select from "./Select";
 
 class CurrencyView extends React.Component {
   state = {
-    currency: [],
-    lastUpdate: new Date().toLocaleString(),
+    rates: [],
+    base: "EUR",
+    currencies: [],
+    lastUpdate: new Date().toLocaleString()
+  };
+
+  componentDidMount() {
+    this.fetchCurrency(this.state.base);
   }
 
-  componentDidMount(){
-    this.fetchCurrency();
-  }
-
-  fetchCurrency = () => {
-    fetch('http://data.fixer.io/api/latest?access_key=94e4995b26cb8f5dd05ad583cbaeb33e')
+  fetchCurrency = value => {
+    fetch(`https://api.exchangeratesapi.io/latest?base=${value}`)
       .then(response => response.json())
-      .then((currency) => {
-        this.setState({ currency: currency.rates });
-      })
-      .catch = (error) => {
-        console.log(error);
-      }
-  }
+      .then(currency => {
+        this.setState({ base: currency.base });
+        this.setState({ rates: currency.rates });
+      }).catch = error => {
+      console.log(error);
+    };
+  };
 
   latestUpdate = () => {
     let date = new Date();
-    this.setState({ 
+    this.setState({
       lastUpdate: date.toLocaleString()
     });
-  }
+  };
 
-  updateCurrency = () => {
-    this.fetchCurrency();
-    this.latestUpdate();
-  }
-
-  render(){ 
-    const { currency, lastUpdate } = this.state;
-    const { updateCurrency } = this;
-    return(
+  render() {
+    const { rates, base, lastUpdate } = this.state;
+    const { fetchCurrency, latestUpdate } = this;
+    const swedishKrona = parseFloat(rates.SEK).toFixed(2);
+    const items = Object.keys(this.state.rates);
+    return (
       <Container className="cardContainer marginFix">
         <Heading title="Currency" />
         <p className="currency">
-          { currency.EUR } EUR = { currency.SEK } SEK
+          1 {base} = {swedishKrona} SEK
         </p>
         <p>
-          <strong>Last update:</strong> { lastUpdate }
+          <strong>Last update:</strong> <br />
+          {lastUpdate}
         </p>
-        <Button handleChange={ updateCurrency } value="Update" />
+        <Select
+          items={items}
+          fetchCurrency={fetchCurrency}
+          latestUpdate={latestUpdate}
+        />
       </Container>
-    )
+    );
   }
 }
 

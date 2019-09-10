@@ -1,14 +1,14 @@
 @font-face {
   font-family: Circular-Black;
-  src: url(../fonts/circular-black.otf);
+  src: url(../Fonts/circular-black.otf);
 }
 
 @font-face {
   font-family: Circular-Book;
-  src: url(../fonts/circular-book.otf);
+  src: url(../Fonts/circular-book.otf);
 }
 
 @font-face {
   font-family: RobotoMono;
-  src: url(../fonts/robotomono-light.ttf);
+  src: url(../Fonts/RobotoMono-Light.ttf);
 }
