@@ -22,14 +22,22 @@
 }
 
 .Grid--gutter {
-  margin-top: (-0.5 * 40px);
+  margin-top: (-0.5 * 30px);
   margin-right: (-0.5 * 40px);
-  margin-bottom: (-0.5 * 40px);
+  margin-bottom: (-0.5 * 30px);
   margin-left: (-0.5 * 40px);
   & > .Grid-cell {
-    padding-top: (0.5 * 40px);
+    padding-top: (0.5 * 30px);
     padding-right: (0.5 * 40px);
-    padding-bottom: (0.5 * 40px);
+    padding-bottom: (0.5 * 30px);
     padding-left: (0.5 * 40px);
+  }
+  @media screen and ($bpLarge) {
+    margin-top: (-0.5 * 40px);
+    margin-bottom: (-0.5 * 40px);
+    & > .Grid-cell {
+      padding-top: (0.5 * 40px);
+      padding-bottom: (0.5 * 40px);
+    }
   }
 }
