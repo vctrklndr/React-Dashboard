@@ -1,6 +1,6 @@
 import React from "react";
 
-function Select({ items, fetchCurrency, latestUpdate }) {
+function Select({ items, fetchCurrency, getCurrentDate }) {
   let option = items.map((item, index) => {
     return (
       <option value={item} key={index}>
@@ -13,7 +13,7 @@ function Select({ items, fetchCurrency, latestUpdate }) {
     <select
       className="select"
       onChange={e => {
-        fetchCurrency(e.target.value), latestUpdate();
+        fetchCurrency(e.target.value), getCurrentDate();
       }}
     >
       {option}

@@ -2,18 +2,18 @@ import React from 'react';
 import Container from './Container';
 import Heading from './Heading';
 import WeatherIcon from './WeatherIcon';
-import ClearSky from './Images/01d.svg';
-import ClearSkyNight from './Images/01n.svg';
-import FewClouds from './Images/02d.svg';
-import FewCloudsNight from './Images/02n.svg';
-import ScatteredClouds from './Images/03d.svg';
-import BrokenClouds from './Images/04d.svg';
-import ShowerRain from './Images/09d.svg';
-import Rain from './Images/10d.svg';
-import RainNight from './Images/10n.svg';
-import ThunderStorm from './Images/11d.svg';
-import Snow from './Images/13d.svg';
-import Mist from './Images/50d.svg';
+import ClearSky from '../Assets/Images/01d.svg';
+import ClearSkyNight from '../Assets/Images/01n.svg';
+import FewClouds from '../Assets/Images/02d.svg';
+import FewCloudsNight from '../Assets/Images/02n.svg';
+import ScatteredClouds from '../Assets/Images/03d.svg';
+import BrokenClouds from '../Assets/Images/04d.svg';
+import ShowerRain from '../Assets/Images/09d.svg';
+import Rain from '../Assets/Images/10d.svg';
+import RainNight from '../Assets/Images/10n.svg';
+import ThunderStorm from '../Assets/Images/11d.svg';
+import Snow from '../Assets/Images/13d.svg';
+import Mist from '../Assets/Images/50d.svg';
 
 
 class TodaysWeatherView extends React.Component {

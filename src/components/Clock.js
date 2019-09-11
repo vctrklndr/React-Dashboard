@@ -1,30 +1,33 @@
-import React from 'react';
-import Container from './Container';
-import Heading from './Heading';
+import React from "react";
+import Container from "./Container";
+import Heading from "./Heading";
 
 class Clock extends React.Component {
   state = {
-    time: new Date(),
-  }
+    time: new Date()
+  };
 
-  componentDidMount(){
-    setInterval(() => this.localTime(), 1000)
+  componentDidMount() {
+    setInterval(() => this.localTime(), 1000);
   }
 
   localTime = () => {
     this.setState({
       time: new Date()
     });
-  }
+  };
 
-  render(){ 
+  render() {
     const { time } = this.state;
-    return(
+    const date =
+      time.getFullYear() + "/" + (time.getMonth() + 1) + "/" + time.getDate();
+    const clock = time.toLocaleTimeString();
+    return (
       <Container className="cardContainer clock">
-        <Heading title={ time.toLocaleTimeString() } />
-        <p>{ time.toLocaleDateString() }</p>
+        <Heading title={clock} />
+        <p>{date}</p>
       </Container>
-    )
+    );
   }
 }
 

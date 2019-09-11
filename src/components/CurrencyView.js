@@ -5,44 +5,53 @@ import Select from "./Select";
 
 class CurrencyView extends React.Component {
   state = {
-    rates: [],
-    base: "EUR",
+    currencyRates: [],
+    baseCurrency: "EUR",
     currencies: [],
-    lastUpdate: new Date().toLocaleString()
+    lastUpdate: ""
   };
 
   componentDidMount() {
-    this.fetchCurrency(this.state.base);
+    this.fetchCurrency(this.state.baseCurrency);
+    this.getCurrentDate();
   }
+
+  getCurrentDate = () => {
+    const currentDate = new Date();
+    const dateAndTime =
+      currentDate.getFullYear() +
+      "/" +
+      (currentDate.getMonth() + 1) +
+      "/" +
+      currentDate.getDate() +
+      " " +
+      currentDate.toLocaleTimeString();
+    this.setState({
+      lastUpdate: dateAndTime
+    });
+  };
 
   fetchCurrency = value => {
     fetch(`https://api.exchangeratesapi.io/latest?base=${value}`)
       .then(response => response.json())
       .then(currency => {
-        this.setState({ base: currency.base });
-        this.setState({ rates: currency.rates });
+        this.setState({ baseCurrency: currency.base });
+        this.setState({ currencyRates: currency.rates });
       }).catch = error => {
       console.log(error);
     };
   };
 
-  latestUpdate = () => {
-    let date = new Date();
-    this.setState({
-      lastUpdate: date.toLocaleString()
-    });
-  };
-
   render() {
-    const { rates, base, lastUpdate } = this.state;
-    const { fetchCurrency, latestUpdate } = this;
-    const swedishKrona = parseFloat(rates.SEK).toFixed(2);
-    const items = Object.keys(this.state.rates);
+    const { currencyRates, baseCurrency, lastUpdate } = this.state;
+    const { fetchCurrency, getCurrentDate } = this;
+    const swedishKrona = parseFloat(currencyRates.SEK).toFixed(2);
+    const items = Object.keys(currencyRates);
     return (
       <Container className="cardContainer marginFix">
         <Heading title="Currency" />
         <p className="currency">
-          1 {base} = {swedishKrona} SEK
+          1 {baseCurrency} = {swedishKrona} SEK
         </p>
         <p>
           <strong>Last update:</strong> <br />
@@ -51,7 +60,7 @@ class CurrencyView extends React.Component {
         <Select
           items={items}
           fetchCurrency={fetchCurrency}
-          latestUpdate={latestUpdate}
+          getCurrentDate={getCurrentDate}
         />
       </Container>
     );
