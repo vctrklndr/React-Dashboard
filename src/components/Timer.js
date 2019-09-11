@@ -60,7 +60,7 @@ class Timer extends React.Component {
     const { time } = this.state;
     const { timerView } = this;
 
-    const containerClass = ["Block"];
+    const containerClass = ["Block Block--spacer"];
     if (time === 0) {
       containerClass.push("Timer--ended");
     }

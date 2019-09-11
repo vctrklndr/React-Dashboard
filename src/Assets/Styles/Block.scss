@@ -1,12 +1,10 @@
 .Block {
-  margin: 15px 20px;
   padding: 20px 20px;
   width: calc(100% - 40px);
   max-width: 500px;
   background-color: #fff;
   border: 1px solid #000;
   box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
-  flex-grow: 1;
   @media screen and ($bpLarge) {
     min-width: 300px;
     max-width: 300px;
@@ -16,5 +14,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  &--fullSize {
+    flex-grow: 1;
+  }
+  &--spacer {
+    margin-bottom: 40px;
+    @media screen and ($bpLarge) {
+      margin-bottom: 0;
+    }
   }
 }

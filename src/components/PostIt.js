@@ -50,7 +50,7 @@ class PostIt extends React.Component {
     const { name, items, error } = this.state;
     const { handleChange, handleSubmit, deleteListItem } = this;
     return(
-      <Container className="Block">
+      <Container className="Block Block--fullSize">
         <Heading title="Post-it" />
         <InputField handleChange={ handleChange }
                     handleSubmit={ handleSubmit }

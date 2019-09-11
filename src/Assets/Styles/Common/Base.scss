@@ -18,9 +18,3 @@ strong {
   background: #ffdd3e;
   color: #000;
 }
-
-.marginFix {
-  @media screen and ($bpLarge) {
-    margin-top: 15px;
-  }
-}

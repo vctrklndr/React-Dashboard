@@ -8,7 +8,7 @@ import PostIt from "./PostIt";
 function Main() {
   return (
     <main className="Page-container">
-      <div className="Grid">
+      <div className="Grid Grid--gutter">
         <div className="Grid-cell">
           <Clock />
           <TodaysWeatherView />

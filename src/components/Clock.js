@@ -23,7 +23,7 @@ class Clock extends React.Component {
       time.getFullYear() + "/" + (time.getMonth() + 1) + "/" + time.getDate();
     const clock = time.toLocaleTimeString();
     return (
-      <Container className="Block Block--clock">
+      <Container className="Block Block--clock Block--spacer">
         <Heading title={clock} className="Heading--clock" />
         <p>{date}</p>
       </Container>
