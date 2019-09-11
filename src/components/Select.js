@@ -11,9 +11,9 @@ function Select({ items, fetchCurrency, getCurrentDate }) {
 
   return (
     <select
-      className="select"
+      className="Input-select"
       onChange={e => {
-        fetchCurrency(e.target.value), getCurrentDate();
+        fetchCurrency(e.target.value); getCurrentDate();
       }}
     >
       {option}

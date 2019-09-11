@@ -1,0 +1,13 @@
+.Timer {
+  font-size: 2rem;
+  &--large {
+    font-family: $fontFamilyPrimary-bold;
+    font-size: 4.3rem;
+  }
+  &--ended {
+    background-color: $timerRed !important;
+    transition: all 400ms;
+    -webkit-animation: alert 1.5s ease-in-out 1 both;
+    animation: alert 1.5s ease-in-out 1 both;
+  }
+}

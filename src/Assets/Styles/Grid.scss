@@ -1,0 +1,23 @@
+.Grid {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media screen and ($bpLarge) {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.Grid-cell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and ($bpLarge) {
+    width: auto;
+    justify-content: space-between;
+    height: 100%;
+  }
+}

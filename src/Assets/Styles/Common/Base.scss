@@ -1,0 +1,26 @@
+body {
+  margin: 20px;
+  font-family: $fontFamilyPrimary-regular;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  background-color: $lightGrey;
+}
+
+p {
+  margin: 5px;
+}
+
+strong {
+  font-family: $fontFamilyPrimary-bold;
+}
+
+::selection {
+  background: #ffdd3e;
+  color: #000;
+}
+
+.marginFix {
+  @media screen and ($bpLarge) {
+    margin-top: 15px;
+  }
+}

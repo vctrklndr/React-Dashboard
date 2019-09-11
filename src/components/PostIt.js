@@ -50,14 +50,14 @@ class PostIt extends React.Component {
     const { name, items, error } = this.state;
     const { handleChange, handleSubmit, deleteListItem } = this;
     return(
-      <Container className="cardContainer">
+      <Container className="Block">
         <Heading title="Post-it" />
         <InputField handleChange={ handleChange }
                     handleSubmit={ handleSubmit }
                     value={ name }
                     placeholder="What to remember?"
         />
-        <p className="error">{ error }</p>
+        <p className="Text--errorMessage">{ error }</p>
         <List items={ items } deleteListItem={ deleteListItem } />
       </Container>
     )

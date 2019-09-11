@@ -48,9 +48,9 @@ class CurrencyView extends React.Component {
     const swedishKrona = parseFloat(currencyRates.SEK).toFixed(2);
     const items = Object.keys(currencyRates);
     return (
-      <Container className="cardContainer marginFix">
+      <Container className="Block marginFix">
         <Heading title="Currency" />
-        <p className="currency">
+        <p className="Text--currency">
           1 {baseCurrency} = {swedishKrona} SEK
         </p>
         <p>

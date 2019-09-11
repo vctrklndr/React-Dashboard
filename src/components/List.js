@@ -4,10 +4,10 @@ import X from '../Assets/Images/x.svg';
 function List({ items, deleteListItem }) {
   let list = items.map( (item, index) => {
     return (
-      <li key={ index }>
+      <li className="List-item" key={ index }>
         { item }
         <img  src={ X } 
-              id="closeButton"
+              className="Button-close"
               onClick={ () => deleteListItem(index) } 
               alt="Delete post"
         />
@@ -16,7 +16,7 @@ function List({ items, deleteListItem }) {
   });
 
   return(
-    <ul>
+    <ul className="List">
       { list }
     </ul>
   );

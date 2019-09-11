@@ -33,9 +33,9 @@ class Timer extends React.Component {
     if (timeLeft === 0) {
       return (
         <Container>
-          <p className="timer">Time's up!</p>
+          <p className="Timer">Time's up!</p>
           <Button
-            className="resetButton"
+            className="Button Button-reset"
             handleChange={this.resetTimer}
             value="Reset timer!"
           />
@@ -44,21 +44,25 @@ class Timer extends React.Component {
     } else if (timeLeft === 60) {
       return (
         <Container>
-          <p className="timer">{timeLeft} seconds</p>
-          <Button handleChange={this.startTimer} value="Start timer!" />
+          <p className="Timer">{timeLeft} seconds</p>
+          <Button
+            className="Button"
+            handleChange={this.startTimer}
+            value="Start timer!"
+          />
         </Container>
       );
     }
-    return <p className="timerBig"> {timeLeft} </p>;
+    return <p className="Timer--large"> {timeLeft} </p>;
   };
 
   render() {
     const { time } = this.state;
     const { timerView } = this;
 
-    const containerClass = ["cardContainer"];
+    const containerClass = ["Block"];
     if (time === 0) {
-      containerClass.push("timerEnding");
+      containerClass.push("Timer--ended");
     }
     return (
       <Container className={containerClass.join(" ")}>

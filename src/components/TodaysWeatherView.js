@@ -86,7 +86,7 @@ class TodaysWeatherView extends React.Component {
     const { weather, main } = this.state;
     const { weatherIcons } = this;
     return(
-      <Container className="cardContainer">
+      <Container className="Block">
         <Heading title="Todays weather" />
         { weatherIcons() }
         <h4>Stockholm</h4>

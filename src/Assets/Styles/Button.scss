@@ -1,0 +1,32 @@
+.Button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-family: "RobotoMono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08rem;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  transition: background-color 400ms;
+}
+
+.Button:hover {
+  color: #000;
+  background-color: #ffdd3e;
+  cursor: pointer;
+}
+
+.Button-reset {
+  background-color: #000;
+}
+
+.Button-close {
+  margin-left: 10px;
+  width: 18px;
+}
+
+.Button-close:hover {
+  -webkit-animation: rotate 900ms ease-in-out;
+  animation: rotate 900ms ease-in-out;
+  cursor: pointer;
+}

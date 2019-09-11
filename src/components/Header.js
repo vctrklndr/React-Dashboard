@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function Header(props){
-  return(
+function Header(props) {
+  return (
     <header className="header">
-        <h1>
-          <span className="headingBackground">
-            Dashboard
-          </span>
-        </h1>
+      <h1 className="Heading Heading--h1">
+        <span className="Heading--background">Dashboard</span>
+      </h1>
     </header>
-  )
+  );
 }
 
 export default Header;
