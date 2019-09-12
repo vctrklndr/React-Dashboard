@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "/React-Dashboard/static/media/arrow-down.6a322037.svg"
   },
   {
-    "revision": "6365c40aa59d462f1cc52ccce9635cb4",
-    "url": "/React-Dashboard/static/media/circular-book.6365c40a.otf"
-  },
-  {
     "revision": "7f42d8488652eb250af2f484d377dbee",
     "url": "/React-Dashboard/static/media/circular-black.7f42d848.otf"
+  },
+  {
+    "revision": "6365c40aa59d462f1cc52ccce9635cb4",
+    "url": "/React-Dashboard/static/media/circular-book.6365c40a.otf"
   },
   {
     "revision": "b82d827ba127c43e9272942682b88dc3",
