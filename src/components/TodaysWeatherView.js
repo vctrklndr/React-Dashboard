@@ -22,76 +22,82 @@ class TodaysWeatherView extends React.Component {
     main: [],
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchTodaysWeather();
   }
 
   fetchTodaysWeather = () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Stockholm&APPID=3f811f4e602b5451b64f25e97ad55d60&units=metric`)
-    .then(response => response.json())
-    .then((weather) => {
-      this.setState({ weather: weather.main });
-      this.setState({ main: weather.weather[0] });
-    })
-    .catch = (error) => {
-      console.log(error);
-    }
+      .then(response => response.json())
+      .then((weather) => {
+        this.setState({ weather: weather.main });
+        this.setState({ main: weather.weather[0] });
+      })
+      .catch = (error) => {
+        console.log(error);
+      }
   }
 
   weatherIcons = () => {
     const icon = this.state.main.icon;
-    switch( icon ) {
+    switch (icon) {
       case '01d':
-        return <WeatherIcon src={ ClearSky } alt="Clear sky" />
+        return <WeatherIcon src={ClearSky} alt="Clear sky" />
 
       case '01n':
-        return <WeatherIcon src={ ClearSkyNight } alt="Clear sky" />
+        return <WeatherIcon src={ClearSkyNight} alt="Clear sky" />
 
       case '02d':
-        return <WeatherIcon src={ FewClouds } alt="Few clouds" />
+        return <WeatherIcon src={FewClouds} alt="Few clouds" />
 
       case '02n':
-        return <WeatherIcon src={ FewCloudsNight } alt="Few clouds" />
+        return <WeatherIcon src={FewCloudsNight} alt="Few clouds" />
 
-      case '03d' || '03n':
-        return <WeatherIcon src={ ScatteredClouds } alt="Scattered clouds" />
+      case '03d':
+      case '03n':
+        return <WeatherIcon src={ScatteredClouds} alt="Scattered clouds" />
 
-      case '04d' || '04n':
-        return <WeatherIcon src={ BrokenClouds } alt="Broken clouds" />
+      case '04d':
+      case '04n':
+        return <WeatherIcon src={BrokenClouds} alt="Broken clouds" />
 
-      case '09d' || '09n':
-        return <WeatherIcon src={ ShowerRain } alt="Shower rain" />
+      case '09d':
+      case '09n':
+        return <WeatherIcon src={ShowerRain} alt="Shower rain" />
 
       case '10d':
-        return <WeatherIcon src={ Rain } alt="Rain" />
+        return <WeatherIcon src={Rain} alt="Rain" />
 
       case '10n':
-        return <WeatherIcon src={ RainNight } alt="Rain" />
+        return <WeatherIcon src={RainNight} alt="Rain" />
 
-      case '11d' || '11n':
-        return <WeatherIcon src={ ThunderStorm } alt="Thunderstorm" />
+      case '11d':
+      case '11n':
+        return <WeatherIcon src={ThunderStorm} alt="Thunderstorm" />
 
-      case '13d' || '13n':
-        return <WeatherIcon src={ Snow } alt="Snow" />
+      case '13d':
+      case '13n':
+        return <WeatherIcon src={Snow} alt="Snow" />
 
-      case '50d' || '50n':
-        return <WeatherIcon src={ Mist } alt="Mist" />
+      case '50d':
+      case '50n':
+        return <WeatherIcon src={Mist} alt="Mist" />
 
       default:
         return null
     }
   }
 
-  render(){ 
+  render() {
     const { weather, main } = this.state;
     const { weatherIcons } = this;
-    return(
+    return (
       <Container className="Block">
         <Heading title="Todays weather" />
-        { weatherIcons() }
+        {weatherIcons()}
         <h4>Stockholm</h4>
-        <p>Temperature: {Math.round( weather.temp )}°C</p>
-        <p>{ main.description }</p>
+        <p>Temperature: {Math.round(weather.temp)}°C</p>
+        <p>{main.description}</p>
       </Container>
     )
   }

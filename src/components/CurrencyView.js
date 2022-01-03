@@ -32,14 +32,14 @@ class CurrencyView extends React.Component {
   };
 
   fetchCurrency = value => {
-    fetch(`https://api.exchangeratesapi.io/latest?base=${value}`)
+    fetch(`https://api.frankfurter.app/latest?from=${value}`)
       .then(response => response.json())
       .then(currency => {
         this.setState({ baseCurrency: currency.base });
         this.setState({ currencyRates: currency.rates });
       }).catch = error => {
-      console.log(error);
-    };
+        console.log(error);
+      };
   };
 
   render() {
