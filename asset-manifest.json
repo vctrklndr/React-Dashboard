@@ -1,9 +1,9 @@
 {
-  "main.css": "/React-Dashboard/static/css/main.d8829acc.chunk.css",
-  "main.js": "/React-Dashboard/static/js/main.0f71bc71.chunk.js",
-  "main.js.map": "/React-Dashboard/static/js/main.0f71bc71.chunk.js.map",
-  "static/js/1.b26df6dd.chunk.js": "/React-Dashboard/static/js/1.b26df6dd.chunk.js",
-  "static/js/1.b26df6dd.chunk.js.map": "/React-Dashboard/static/js/1.b26df6dd.chunk.js.map",
+  "main.css": "/React-Dashboard/static/css/main.59293b6e.chunk.css",
+  "main.js": "/React-Dashboard/static/js/main.cb4ffe8c.chunk.js",
+  "main.js.map": "/React-Dashboard/static/js/main.cb4ffe8c.chunk.js.map",
+  "static/js/1.3ce7065a.chunk.js": "/React-Dashboard/static/js/1.3ce7065a.chunk.js",
+  "static/js/1.3ce7065a.chunk.js.map": "/React-Dashboard/static/js/1.3ce7065a.chunk.js.map",
   "runtime~main.js": "/React-Dashboard/static/js/runtime~main.1229ecd5.js",
   "runtime~main.js.map": "/React-Dashboard/static/js/runtime~main.1229ecd5.js.map",
   "static/media/01d.svg": "/React-Dashboard/static/media/01d.a82069ff.svg",
@@ -20,8 +20,8 @@
   "static/media/50d.svg": "/React-Dashboard/static/media/50d.2ecfcf0e.svg",
   "static/media/x.svg": "/React-Dashboard/static/media/x.62eefd11.svg",
   "static/media/App.scss": "/React-Dashboard/static/media/RobotoMono-Light.b82d827b.ttf",
-  "static/css/main.d8829acc.chunk.css.map": "/React-Dashboard/static/css/main.d8829acc.chunk.css.map",
+  "static/css/main.59293b6e.chunk.css.map": "/React-Dashboard/static/css/main.59293b6e.chunk.css.map",
   "index.html": "/React-Dashboard/index.html",
-  "precache-manifest.9b06d55c1e352f26c4f6ad1aa508e9ff.js": "/React-Dashboard/precache-manifest.9b06d55c1e352f26c4f6ad1aa508e9ff.js",
+  "precache-manifest.caf03207c48c538258bb320ab0680ff9.js": "/React-Dashboard/precache-manifest.caf03207c48c538258bb320ab0680ff9.js",
   "service-worker.js": "/React-Dashboard/service-worker.js"
 }

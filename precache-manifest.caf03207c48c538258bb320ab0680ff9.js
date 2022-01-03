@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "0f71bc710913ca682a33",
-    "url": "/React-Dashboard/static/css/main.d8829acc.chunk.css"
+    "revision": "cb4ffe8c05220011dafe",
+    "url": "/React-Dashboard/static/css/main.59293b6e.chunk.css"
   },
   {
-    "revision": "0f71bc710913ca682a33",
-    "url": "/React-Dashboard/static/js/main.0f71bc71.chunk.js"
+    "revision": "cb4ffe8c05220011dafe",
+    "url": "/React-Dashboard/static/js/main.cb4ffe8c.chunk.js"
   },
   {
-    "revision": "b26df6dd055085355a94",
-    "url": "/React-Dashboard/static/js/1.b26df6dd.chunk.js"
+    "revision": "3ce7065a5e5d588acb5d",
+    "url": "/React-Dashboard/static/js/1.3ce7065a.chunk.js"
   },
   {
     "revision": "1229ecd5760e470499f1",
@@ -72,19 +72,19 @@ self.__precacheManifest = [
     "url": "/React-Dashboard/static/media/arrow-down.6a322037.svg"
   },
   {
-    "revision": "7f42d8488652eb250af2f484d377dbee",
-    "url": "/React-Dashboard/static/media/circular-black.7f42d848.otf"
-  },
-  {
     "revision": "6365c40aa59d462f1cc52ccce9635cb4",
     "url": "/React-Dashboard/static/media/circular-book.6365c40a.otf"
+  },
+  {
+    "revision": "7f42d8488652eb250af2f484d377dbee",
+    "url": "/React-Dashboard/static/media/circular-black.7f42d848.otf"
   },
   {
     "revision": "b82d827ba127c43e9272942682b88dc3",
     "url": "/React-Dashboard/static/media/RobotoMono-Light.b82d827b.ttf"
   },
   {
-    "revision": "2fd138baeef86acd5347d28f27a399c1",
+    "revision": "d936c6a232c58a6d87daa1620a833cb1",
     "url": "/React-Dashboard/index.html"
   }
 ];
